@@ -10,12 +10,15 @@
                 i = 90000;
                 a.onclick = function (){
                     i++;
+                    document.getElementById("aaa").innerText = i%5+1;
                     document.getElementsByTagName("img")[0].src = i%5+1+".jpeg";
                 }
                 b.onclick = function (){
                     i--;
+                    document.getElementById("aaa").innerText = i%5+1;
                     document.getElementsByTagName("img")[0].src = i%5+1+".jpeg";
                 }
+
             }
             // 下面这样改也可以的，他表示的是当前显示，其余不显示
             // window.onload = function (){
@@ -56,6 +59,7 @@
 </head>
 <body>
     <div>
+        <p>一共5张图片，当前第<span id="aaa">1</span>张</p>
         <img src="1.jpeg" style="display: block"width="250px" height="500px"  alt="pic1">
 <!--        <img src="2.jpeg" style="display: none" width="250px" height="500px" alt="pic2">-->
 <!--        <img src="3.jpeg" style="display: none" width="250px" height="500px" alt="pic3">-->
